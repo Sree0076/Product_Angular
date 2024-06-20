@@ -1,42 +1,66 @@
-body{
-  background-color: aqua;
-}
-/* Basic styles for the card carousel */
 
 .carousel-container {
-width: 100%;
-overflow: hidden;
-overflow-x: auto;
+  width: 100%;
+  overflow: hidden;
+  overflow-x: auto;
+  padding-bottom: 20px; /* Ensure space for scrollbar */
+  scrollbar-width: thin; /* Thin scrollbar (supported in modern browsers) */
+
 }
 
 .card-carousel {
-display: flex; /* Ensure cards are displayed in a row */
-transition: transform 0.5s ease; /* Smooth transition for sliding effect */
+  display: flex;
+  transition: transform 0.5s ease;
+  padding: 10px; /* Padding around the cards */
 }
 
 .card {
-flex: 0 0 300px; /* Fixed width for each card */
-margin: 0 10px; /* Space between cards */
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-border-radius: 8px;
-overflow: hidden;
+  flex: 0 0 300px;
+  margin: 0 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
 
+.card:hover {
+  transform: translateY(-5px); /* Lift the card on hover */
 }
 
 .card img {
-width: 80%; /* Ensure images fill the card */
-height: 200px; /* Maintain aspect ratio */
+  width: 50%;
+  height: 50%;
+  margin: auto;
 }
 
 .card-content {
-padding: 15px;
+  font-family: 'Roboto', sans-serif;
+  padding: 15px;
 }
 
 .card h3 {
-margin: 10px 0;
+  margin: 10px 0;
+  font-size: 18px;
 }
 
 .card p {
-font-size: 14px;
-line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Style scrollbar */
+.carousel-container::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.carousel-container::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Track color */
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+  background-color: #595757; /* Thumb color */
+  border-radius: 8px;
 }

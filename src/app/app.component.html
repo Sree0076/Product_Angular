@@ -1,6 +1,6 @@
 
 @for (item of uniqueCategories; track item) {
-  <h4>{{item}}</h4>
+  <h4>{{item.toUpperCase()}}</h4>
 <app-carousel [category]="uniqueCategories" [product]="getProductsByCategory(item)" ></app-carousel>
 }
 
