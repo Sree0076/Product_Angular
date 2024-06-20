@@ -1,0 +1,42 @@
+body{
+  background-color: aqua;
+}
+/* Basic styles for the card carousel */
+
+.carousel-container {
+width: 100%;
+overflow: hidden;
+overflow-x: auto;
+}
+
+.card-carousel {
+display: flex; /* Ensure cards are displayed in a row */
+transition: transform 0.5s ease; /* Smooth transition for sliding effect */
+}
+
+.card {
+flex: 0 0 300px; /* Fixed width for each card */
+margin: 0 10px; /* Space between cards */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+overflow: hidden;
+
+}
+
+.card img {
+width: 80%; /* Ensure images fill the card */
+height: 200px; /* Maintain aspect ratio */
+}
+
+.card-content {
+padding: 15px;
+}
+
+.card h3 {
+margin: 10px 0;
+}
+
+.card p {
+font-size: 14px;
+line-height: 1.6;
+}

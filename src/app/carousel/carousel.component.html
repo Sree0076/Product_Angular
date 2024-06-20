@@ -1,0 +1,13 @@
+<div class="carousel-container">
+  <div class="card-carousel">
+    @for (item of product; track product) {
+    <div class="card">
+      <img [src]="item.images[0]" alt="Image 1">
+      <div class="card-content">
+        <h6>{{item.title}}</h6>
+        <p>{{item.description}}</p>
+      </div>
+    </div>
+  }
+  </div>
+</div>
